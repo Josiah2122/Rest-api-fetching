@@ -52,12 +52,23 @@ export default function App() {
       ? fetchUsers()
       : current === "Posts"
       ? fetchPosts()
-      : fetchComments();
+      : current === "Comments"
+      ? fetchComments()
+      : null;
   }, [current]);
-  console.log(current, "current");
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setCurrent(e.target.value);
+  };
+
   return (
     <>
-      <NavBar current={current} setCurrent={setCurrent} />
+      <NavBar
+        current={current}
+        setCurrent={setCurrent}
+        handleChange={handleChange}
+      />
       <Content list={list} />
     </>
   );
