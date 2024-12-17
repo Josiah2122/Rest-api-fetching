@@ -1,12 +1,18 @@
 import React from "react";
+import TablePreview from "./TablePreview";
 
 export default function Content({ list }) {
   return (
-    <ul>
+    // <ul className="unorderedList">
+    <>
       {list?.map((item, index) => (
-        <li key={index}>{JSON.stringify(item)}</li>
+        // <li className="list" key={index}>
+        //   {JSON.stringify(item)}
+        // </li>
+        <TablePreview item={item} key={index} />
       ))}
-    </ul>
+    </>
+    // </ul>
   );
 }
 

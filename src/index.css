@@ -35,3 +35,30 @@ button:hover {
   background-color: rgb(41, 41, 41);
   outline: none;
 }
+
+.unorderedList {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.list {
+  list-style-type: none;
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+  border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+table tr td {
+  width: 5rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+}
